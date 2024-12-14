@@ -52,7 +52,7 @@ Creating a virtual environment for this project helps manage dependencies and av
    Once activated, your prompt should change to `(infectikit-env)` indicating that you're working inside the virtual environment.
 
 ### Step 3: **Install Dependencies**
-Since the `InfectiKit.py` repository may not include a `requirements.txt` file, you need to manually create one to install the necessary Python dependencies.
+Since the `InfectiKIt.py` repository may not include a `requirements.txt` file, you need to manually create one to install the necessary Python dependencies.
 
 1. **Create the `requirements.txt` file** with the following content:
 
@@ -76,7 +76,7 @@ Since the `InfectiKit.py` repository may not include a `requirements.txt` file, 
     ```
 
 ### Step 4: **Run the Tool**
-Once the dependencies are installed, you can run the `InfectiKit.py` tool.
+Once the dependencies are installed, you can run the `InfectiKIt.py` tool.
 
 1. **Run the tool** with the following command:
 
