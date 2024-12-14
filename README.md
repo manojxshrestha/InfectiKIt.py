@@ -81,7 +81,7 @@ Once the dependencies are installed, you can run the `InfectiKit.py` tool.
 1. **Run the tool** with the following command:
 
     ```bash
-    python3 InfectiKit.py
+    python3 InfectiKIt.py
     ```
 
 2. The tool will start, and you’ll be presented with a menu to choose from various actions (e.g., generate APK, modify APK version, etc.).
