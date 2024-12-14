@@ -100,13 +100,13 @@ After running the tool, follow the on-screen instructions to use the tool effect
 ### **Set Up the Listener (Metasploit)**
 If the APK was created to generate a reverse shell (using `msfvenom`), you need to set up a **listener** to handle the connection.
 
-#### ** 1aunch Metasploit Framework:**
+#### **Launch Metasploit Framework:**
 Start Metasploit:
 ```bash
 msfconsole
 ```
 
-#### ** Set Up the Listener:**
+#### **Set Up the Listener:**
  Use the **multi/handler** module:
    ```bash
    use exploit/multi/handler
